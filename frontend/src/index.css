@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background styling */
+body {
+  font-family: "Poppins", "Lato", system-ui;
+}
+.home-section-banner {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 119, 254, 0) 0,
+    var(--tp-red) 100%
+  ) !important;
+  height: 220px;
+  position: fixed;
+  margin-top: 168px;
+  z-index: -1;
+  width: 100% !important;
+  opacity: 0.21;
+  bottom: 0;
+}
+.loader {
+  color: #ff2600;
+  font-size: 45px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  transform: translateZ(0);
+  animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+@keyframes mltShdSpin {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Root styling */
+:root {
+  --tp-100: #f7f8f9;
+  --tp-200: #edeff2;
+  --tp-300: #e5e7eb;
+  --tp-400: #d1d5db;
+  --tp-500: #727272;
+  --tp-600: #565656;
+  --tp-700: #434343;
+  --tp-800: #333;
+  --tp-red: #ff2600;
+  --tp-red--hover: #cc1e00;
+  --tp-green: #1fc15b;
+  --tp-soft: ##ffffff4f;
+  --tp-blue-gradient: linear-gradient(
+    90deg,
+    rgb(255, 38, 0) 0,
+    rgb(0, 0, 0) 100%
+  );
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.list-none {
+  list-style: none !important;
+}
+.btn-main {
+  background-color: #ff2600;
+  color: white;
+  cursor: pointer;
+}
+.btn-main:hover,
+.btn-main:focus {
+  background-color: #cc1e00 !important;
+  color: #fff !important;
+}
+.btn-second {
+  background-color: var(--tp-400);
+  border: 1px solid #e5e7eb;
+  color: #333333;
+  cursor: pointer;
+}
+
+.btn-second:hover {
+  background-color: var(--tp-500);
+  border: 1px solid #727272;
+  color: #fff;
+}
+.border-400 {
+  border: 1px solid var(--tp-400) !important;
+}
+.bg-300 {
+  background-color: var(--tp-300);
+}
+.bg-200 {
+  background-color: var(--tp-200) !important;
+}
+.bg-800 {
+  background-color: #ff2600;
+  color: white;
+  border: 0;
+}
+.mt-10 {
+  margin-top: 60px;
+}
+.glass {
+  background-color: rgba(
+    247,
+    248,
+    249,
+    0.8
+  ); /* Light background with transparency */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: 10px; /* Rounded corners for a smooth look */
+  padding: 20px; /* Optional: Add padding for content inside */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+/* login page  */
+/* navbar when not login  */
+/* navbar when not login  */
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .navbar-brand {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.nav-guest {
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background: var(--tp-soft);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--tp-200);
+}
+.link-nav {
+  padding: 6px 17px !important;
+
+  font-size: 16px !important;
+  border-bottom: 1px solid transparent;
+  border-radius: 20px !important;
+  font-weight: bold;
+  margin: 10px 5px !important;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none !important;
+  color: var(--tp-800);
+}
+.link-nav:hover {
+  color: white;
+  background-color: var(--tp-red);
+  color: white;
+  border-radius: 20px;
+}
+.nav-active {
+  background-color: var(--tp-red);
+  color: white;
+  border-radius: 20px;
+}
+.text-gradient {
+  background: var(--tp-blue-gradient); /* The gradient background */
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari compatibility */
+  color: transparent; /* Hide the original text color */
+  font-weight: bolder;
+}
+/* side bar */
+.sideBar {
+  background-color: var(--tp-100);
+  border-right: 1px solid #edeff2;
+  height: 100vh;
+  max-width: 300px;
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 7px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: var(--tp-100); /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(70, 69, 69); /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(70, 69, 69); /* Darker color on hover */
+}
+.menu {
+  overflow-y: scroll;
+}
+.history-li {
+  padding: 5px 25px;
+  margin: 10px;
+  margin-block: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  list-style: none;
+  border-top: 1px solid #727272;
+  max-height: 40px;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden; /* Hides any overflowed text */
+  text-overflow: ellipsis; /* Adds ellipsis to truncated text */
+  position: relative; /* Needed for absolute positioning of the content on hover */
+  cursor: pointer;
+}
+
+.history-li:hover,
+.history-li:focus {
+  background-color: #ff2600;
+  color: white;
+  border: 0;
+}
+
+.history-li.active {
+  background-color: #ff2600 !important;
+  color: white !important;
+}
+
+.history-text {
+  display: inline-block;
+
+  transition: transform 6s ease-in-out; /* Slow the text movement down (1 second) */
+  white-space: nowrap; /* Ensure no wrapping of text inside */
+}
+.pfp {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+.carousel-item {
+  padding-inline: 30px;
+  padding-block: 30px;
+  min-height: fit-content;
+}
+/* Custom Arrow Colors */
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+/* Optionally, you can style the arrows when hovered */
+.text-justify {
+  text-align: justify !important;
+}
